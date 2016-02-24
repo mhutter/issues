@@ -27,7 +27,7 @@ func main() {
 	}
 
 	// determine push remote name
-	re := regexp.MustCompile("github.com[:/]([^.]+)(\\.git)?\\s+\\(push\\)")
+	re := regexp.MustCompile("github\\.com[:/](?U:(.+))(\\.git)?\\s+\\(push\\)")
 	matches := re.FindSubmatch(remotes)
 	if len(matches) < 2 {
 		fmt.Printf("Repo name not found for remotes:\n%s", string(remotes))
@@ -57,7 +57,7 @@ func main() {
 
 	var out string
 	if len(issues) < 1 {
-		out = "No open issues! \\o/"
+		out = "No open issues! \\o/\n"
 	} else {
 
 		// construct output
