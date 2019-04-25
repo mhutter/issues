@@ -1,5 +1,7 @@
 # Issues
 
+[![Build Status](https://travis-ci.com/mhutter/issues.svg?branch=master)](https://travis-ci.com/mhutter/issues)
+
 Show all open GitHub issues for the current project.
 
 ## Usage
